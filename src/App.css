@@ -1,38 +1,49 @@
-.App {
-  text-align: center;
+.Collapse {
+  margin: 20px 20px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 5px 15px;
+  max-height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.CollapseContent {
+  overflow: hidden;
+  max-height: 100vh;
+  transition: max-height 0.2s ease-in-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.hidden {
+  max-height: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.CollapseButton {
+  font-size: 14px;
   display: flex;
-  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  line-height: 10px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-decoration-color: rgba(0, 0, 0, 0.3);
+  margin: 10px 0;
+  transition: 0.5s;
+  outline: none;
 }
 
-.App-link {
-  color: #61dafb;
+.CollapseButton:hover,
+.CollapseButton:focus {
+  text-decoration-color: rgba(0, 0, 0, 0.6);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.top {
+  transition: 0.1s;
+  transform: rotate(0);
+}
+
+.bottom {
+  transition: 0.1s;
+  transform: rotate(-180deg);
 }
